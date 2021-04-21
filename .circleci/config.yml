@@ -23,7 +23,6 @@ workflows:
   test-and-build:
     jobs:
       - release-build:
-          requires:
           filters:
             branches:
               only: main # Commits to main branch
