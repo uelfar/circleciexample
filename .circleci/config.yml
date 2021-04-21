@@ -45,7 +45,6 @@ jobs:
 workflows:
   test-and-build:
     jobs:
-      - unit-test
       - release-build:
               #          requires:
               #            - unit-test
@@ -53,4 +52,5 @@ workflows:
           filters:
             branches:
               only: main # Commits to main branch
+      - unit-test
 
