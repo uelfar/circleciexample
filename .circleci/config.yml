@@ -45,12 +45,6 @@ jobs:
 workflows:
   test-and-build:
     jobs:
-      - release-build:
-              #          requires:
-              #            - unit-test
-              #            - android-test-all
-          filters:
-            branches:
-              only: main # Commits to main branch
+      - release-build
       - unit-test
 
