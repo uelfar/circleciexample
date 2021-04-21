@@ -46,11 +46,6 @@ workflows:
   test-and-build:
     jobs:
       - unit-test
-      - android-test:
-          filters:
-            branches:
-              ignore: main # regular commits
-
       - release-build:
           requires:
             - unit-test
