@@ -56,7 +56,7 @@ chunk_size=$(echo $meta_response | jq -r '.chunk_size')
 
 echo $meta_response
 echo $chunk_size
-
+APPCENTER_OUTPUT_DIRECTORY=/tmp
 split_dir=$APPCENTER_OUTPUT_DIRECTORY/split-dir
 mkdir -p $split_dir
 eval split -b $chunk_size $APP_PACKAGE $split_dir/split
