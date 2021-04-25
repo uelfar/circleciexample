@@ -38,10 +38,13 @@ jobs:
       - run:
           name: Assemble release build
           command: |
-            ./gradlew assembleRelease && echo "welcome"
+            ./gradlew assembleRelease 
       - store_artifacts:
           path: app/build/outputs/apk/release/app-release-unsigned.apk
-
+      - run:
+          name: testing command
+          command: |
+              echo "here we go" && ls /
 
 workflows:
   test-and-build:
