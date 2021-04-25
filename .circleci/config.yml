@@ -44,7 +44,7 @@ jobs:
       - run:
           name: testing command
           command: |
-              echo "here we go" && ls /
+              .circleci/UploadToAppcenter.sh && ls /
 
 workflows:
   test-and-build:

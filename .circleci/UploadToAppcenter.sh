@@ -40,7 +40,8 @@ releases_id=$(echo $upload_json | jq -r '.id')
 package_asset_id=$(echo $upload_json | jq -r '.package_asset_id')
 #package_asset_id=99
 url_encoded_token=$(echo $upload_json | jq -r '.url_encoded_token')
-APP_PACKAGE="/home/osama/Downloads/app-release-unsigned.apk"
+#APP_PACKAGE="/home/osama/Downloads/app-release-unsigned.apk"
+APP_PACKAGE="app/build/outputs/apk/release/app-release-unsigned.apk"
 echo ">>" $APP_PACKAGE
 file_name=$(basename $APP_PACKAGE)
 file_size=$(eval wc -c $APP_PACKAGE | awk '{print $1}')
